@@ -1,0 +1,3 @@
+<div *ngIf="(paintings$ | async) as paintings">
+  <div *ngFor="let painting of paintings">{{painting.id}}</div>
+</div>

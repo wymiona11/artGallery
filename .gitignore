@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 # Firebase config files
-/environments
+.environments
