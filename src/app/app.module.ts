@@ -1,3 +1,4 @@
+import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { PaintingsModule } from './paintings/paintings.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -41,6 +42,7 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
       stateKey: 'router'
     }),
     EntityDataModule.forRoot(entityConfig),
+    PageNotFoundModule
   ],
   providers: [],
   exports:[
