@@ -1,0 +1,41 @@
+//main collors
+
+$light: #F8F5F1;
+$dark: #192419;
+$lightBrown: #A39171;
+$darkBrown: #6D4C3D;
+$grey: #727D71;
+
+//default button
+
+@mixin defBtn($width){
+  border: 1px solid $dark;
+  background: none;
+  padding: 0.5rem $width;
+  cursor: pointer;
+  transition: 0.5s;
+  color: $dark;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5%;
+  &:hover{
+    color: $light;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    width: 110%;
+    height: 0%;
+    background: $dark;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  &:hover::before{
+    height: 180%;
+  }
+
+}
+
