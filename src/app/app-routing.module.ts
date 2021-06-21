@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home/home.component';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { AllPaintingsComponent } from './paintings/all-paintings/all-paintings.component';
 import { NgModule } from '@angular/core';
@@ -7,8 +8,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-
 
 const routes: Routes = [
   {
-    path: 'all-paintings',
-    component: AllPaintingsComponent,
+    path: 'home',
+    component: HomeComponent,
     resolve:{
       paintings: PaintingResolverService
     }
@@ -19,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/all-paintings',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {

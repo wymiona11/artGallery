@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.navbar{
+  width: 100vw !important;
+  background-color: $light !important;
+  .navbar-toggler-icon{
+    color: $dark !important;
+  }
+  .nav-link{
+    color: $dark !important;
+    transition: 0.5s;
+    &:hover{
+      background-color: $dark !important;
+      color: $light !important;
+    }
+  }
+}
