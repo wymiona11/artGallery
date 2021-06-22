@@ -20,7 +20,7 @@ $grey: #727D71;
   overflow: hidden !important;
   &:hover{
     color: $bgColor !important;
-    border-top: 2px solid $color !important;
+    border-top: 1px solid $color !important;
   }
   &::before{
     content: '' !important;
