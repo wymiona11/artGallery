@@ -11,7 +11,7 @@
   position: relative;
   z-index: 1;
   .btnHome{
-    @include defBtn(4rem, $dark, $light);
+    @include defBtn(3rem, $dark, $light)
   }
   .errCode{
   font-size: 6rem;

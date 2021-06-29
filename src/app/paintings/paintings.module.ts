@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AllPaintingsComponent } from './all-paintings/all-paintings.component';
 import { EntityDataService, EntityDefinitionService, EntityMetadataMap } from '@ngrx/data';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 export const paintingsEntityMetadata: EntityMetadataMap = {
   Painting: {
@@ -13,10 +15,13 @@ export const paintingsEntityMetadata: EntityMetadataMap = {
 
 @NgModule({
   declarations: [
-    AllPaintingsComponent
+    AllPaintingsComponent,
+
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
+
   ],
   providers:[
     PaintingEntityService,

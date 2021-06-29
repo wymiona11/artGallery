@@ -15,3 +15,11 @@
     }
   }
 }
+
+a{
+  @media (max-width: 768px){
+    &:hover{
+      letter-spacing: 0.2rem;
+    };
+  }
+}
