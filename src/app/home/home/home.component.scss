@@ -1,5 +1,42 @@
 @import '../../../variables';
 
+@mixin defBanner(){
+  @media (max-width: 768px){
+    .paintingCat{
+      color: $light;
+      font-size: 2rem;
+      background-color: rgba(0,0,0,0.20);
+      padding: 2rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s;
+    }
+    &:hover .paintingCat{
+      background-color: rgba(0,0,0,0.40);
+    }
+  };
+  @media (min-width: 769px){
+    .paintingCat{
+      position: absolute;
+      border-radius: 0 0 20px 0;
+      color: $light;
+      font-size: 2rem;
+      background-color: rgba(0,0,0,0.60);
+      padding: 2rem;
+      left: -40%;
+      top: -40%;
+      transition: 1s;
+    }
+    &:hover .paintingCat{
+      left: 0;
+      top: 0;
+    }
+  };
+}
+
 .banner{
   min-height: 70vh;
 
@@ -17,31 +54,50 @@
       font-size: 1rem;
     }
   }
-  .rightBanner{
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/artgallery-9bfaf.appspot.com/o/jachty4_30x60.jpg_1623737837216?alt=media&token=ef3de26a-7d32-4a95-9c40-d14840d6c91e');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-    position: relative;
-    @media (max-width: 768px){
-      height: 80vh;
-    };
-    @media (min-width: 769px){
-      height: 70vh;
-    };
-    z-index: 1;
-    .buttonViewAll{
+  .rightBannerCont{
+    overflow: hidden;
+    .rightBanner{
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/artgallery-9bfaf.appspot.com/o/jachty4_30x60.jpg_1623737837216?alt=media&token=ef3de26a-7d32-4a95-9c40-d14840d6c91e');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+      position: relative;
+      transition: 1s;
       @media (max-width: 768px){
-        @include defBtn(3rem, $light, $dark);
-        margin: 1rem calc(50% - 111px);
+        height: 80vh;
+        &:hover{
+          transform: scale(1.1)
+        }
       };
       @media (min-width: 769px){
-        @include defBtn(3rem, $dark, $light);
-        position: absolute;
-        top: 50%;
+        height: 70vh;
       };
+      z-index: 1;
+      .buttonViewAll{
+        @media (max-width: 768px){
+          color: $light;
+          font-size: 2rem;
+          background: rgba(0,0,0,0.20);
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover{
+            background: rgba(0,0,0,0.40);
+          }
+        };
+        @media (min-width: 769px){
+          @include defBtn(3rem, $dark, $light);
+          position: absolute;
+          background: rgba(0,0,0,0.20);
+          left: 2%;
+          width: 14rem;
+          top: 50%;
+        };
+      }
     }
   }
+
 }
 .categoryPanel{
   .leftCatCont{
@@ -63,19 +119,13 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      position: relative;
       transition: 1s;
       &:hover{
         transform: scale(1.1);
       }
-      .paintingCat{
-        color: $light;
-        font-size: 3rem;
-        background-color: rgba(0,0,0,0.50);
-        padding: 2rem;
-        height: 100%;
-        width: 100%;
-        
-      }
+      @include defBanner();
+
   }
 
   }
@@ -103,14 +153,7 @@
       &:hover{
         transform: scale(1.1);
       };
-      .paintingCat{
-        color: $light;
-        font-size: 3rem;
-        background-color: rgba(0,0,0,0.50);
-        padding: 2rem;
-        height: 100%;
-        width: 100%;
-      };
+      @include defBanner();
     }
   }
   .rightLowerCont{
@@ -137,14 +180,7 @@
         &:hover{
           transform: scale(1.1);
         };
-        .paintingCat{
-          color: $light;
-          font-size: 3rem;
-          background-color: rgba(0,0,0,0.50);
-          padding: 2rem;
-          height: 100%;
-          width: 100%;
-        };
+        @include defBanner();
     }
   }
 

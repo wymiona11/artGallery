@@ -14,12 +14,14 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from './reducers';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

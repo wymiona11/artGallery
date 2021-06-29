@@ -1,6 +1,7 @@
 <div class="container-fluide">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 navBar">
+      <app-spinner *ngIf="loading$ | async"></app-spinner>
       <app-nav-bar></app-nav-bar>
     </div>
     <div class="col-12">
